@@ -1,24 +1,28 @@
+import java.util.Locale;
 import java.util.Scanner;
-
-public class uri1046 {
+public class Static {
 
 	public static void main(String[] args) {
-
+		//Leia a hora inicial e a hora final de um jogo.//
+		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-
-		int horaInicial = sc.nextInt();
-		int horaFinal = sc.nextInt();
-		
-		int duracao;
-		if (horaInicial < horaFinal) {
-			duracao = horaFinal - horaInicial;
+		float horainicial = sc.nextFloat();
+		float horafinal = sc.nextFloat();
+		var horas = (24);
+		float duracao;
+		duracao = horafinal - horainicial;
+		float duracao2 = horas - horainicial + horafinal;
+		if (horainicial < horafinal) {
+			System.out.printf("O jogo durou: %.2f horas%n", duracao);
 		}
 		else {
-			duracao = 24 - horaInicial + horaFinal;
+			System.out.printf("O jogo durou: %.2f horas%n", duracao2);
+			
 		}
 		
-		System.out.println("O JOGO DUROU " + duracao + " HORA(S)");
 		
 		sc.close();
+
 	}
+
 }
