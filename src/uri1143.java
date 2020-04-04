@@ -1,22 +1,24 @@
 import java.util.Scanner;
-
-//nao esqueca de mudar o nome da classe para Main
-public class uri1143 {
+ 
+public class Main {
 
 	public static void main(String[] args) {
-
+		//Fazer um programa para ler um número inteiro positivo N. 
+		//O programa deve então mostrar na tela N linhas,
+		//começando de 1 até N. 
+		//Para cada linha, mostrar o número da linha, depois o quadrado e o cubo do valor.
 		Scanner sc = new Scanner(System.in);
 
 		int n = sc.nextInt();
-		
-		for (int i=1; i<=n; i++) {
+		for (int i = 1; i <= n; i++) {
 
 			int primeiro = i;
 			int segundo = i * i;
 			int terceiro = i * i * i;
-			System.out.printf("%d %d %d%n", primeiro, segundo, terceiro);
+			System.out.printf("%d ", primeiro);
+			System.out.printf("%d ", segundo);
+			System.out.printf("%d %n", terceiro);
 		}
-		
 		sc.close();
 	}
 }
